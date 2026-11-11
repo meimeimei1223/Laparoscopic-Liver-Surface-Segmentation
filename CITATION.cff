@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or the labels, please cite the paper."
+title: "Liver surface zone labels for laparoscopic liver surgery images and baseline models for zone recognition"
+authors:
+  - family-names: Kasai
+    given-names: Meidai
+license: MIT
+repository-code: "https://github.com/meimeimei1223/Laparoscopic-Liver-Surface-Segmentation"
+type: software
+preferred-citation:
+  type: article
+  title: "Liver surface zone labels for laparoscopic liver surgery images and baseline models for zone recognition"
+  authors:
+    - family-names: Kasai
+      given-names: Meidai

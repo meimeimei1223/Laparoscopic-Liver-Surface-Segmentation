@@ -1,0 +1,38 @@
+{
+ "title": "Laparoscopic-Liver-Surface-Segmentation: code and annotation tool for the liver surface zone labels of L3D-2K",
+ "description": "Code and annotation tool for the liver surface zone labels of the L3D-2K laparoscopic liver surgery dataset: JSON conversion, baseline models and validation analyses.",
+ "creators": [
+  {
+   "name": "Kasai, Meidai"
+  }
+ ],
+ "license": "MIT",
+ "upload_type": "software",
+ "keywords": [
+  "computer-vision",
+  "semantic-segmentation",
+  "liver-segmentation",
+  "laparoscopy",
+  "surgical-data-science",
+  "medical-image-segmentation",
+  "dataset",
+  "l3d-2k"
+ ],
+ "related_identifiers": [
+  {
+   "identifier": "https://github.com/meimeimei1223/Laparoscopic-Liver-Surface-Segmentation",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  },
+  {
+   "identifier": "10.5281/zenodo.24125640",
+   "relation": "isSupplementTo",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1016/j.media.2026.103940",
+   "relation": "references",
+   "scheme": "doi"
+  }
+ ]
+}

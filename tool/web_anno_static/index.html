@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liver surface zone annotation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+  <!-- LEFT -->
+  <div id="left" class="panel">
+    <h4>Data</h4>
+    <div id="zip-status" class="status-line">Loading images.zip…</div>
+    <input id="zip-input" type="file" accept=".zip" />
+    <button id="pick-masks">Choose mask folder</button>
+    <div id="masks-status" class="status-line warn">No mask folder (masks will be downloaded)</div>
+
+    <h4>Images</h4>
+    <div id="file-list"></div>
+    <div id="progress">0 / 0</div>
+    <div class="hint">✓ = saved / blue = target</div>
+  </div>
+
+  <!-- CENTER -->
+  <div id="center">
+    <div id="viewport">
+      <div id="world">
+        <canvas id="c-image"></canvas>
+        <canvas id="c-mask"></canvas>
+        <canvas id="c-preview"></canvas>
+        <canvas id="c-overlay"></canvas>
+      </div>
+    </div>
+    <div id="status">Starting…</div>
+  </div>
+
+  <!-- RIGHT -->
+  <div id="right" class="panel">
+    <h4>Tool</h4>
+    <div id="tools">
+      <label class="tool-radio"><input type="radio" name="tool" value="polygon" checked> Polygon (click: vertex / drag: trace / right-click: undo)</label>
+      <label class="tool-radio"><input type="radio" name="tool" value="brush"> Brush (left: paint / right: erase)</label>
+    </div>
+    <button id="snap-toggle" class="active">Edge snap: ON</button>
+    <button id="show-edges">Show edges: OFF</button>
+    <div id="brush-row"><span>Snap radius</span><input id="snap-radius" type="range" min="4" max="48" value="22"><span id="snap-r-val">22</span></div>
+    <div id="brush-row"><span>Edge sensitivity</span><input id="edge-sens" type="range" min="4" max="35" value="14"><span id="sens-val">14%</span></div>
+    <div id="brush-row">
+      <span>Brush</span><input id="brush-slider" type="range" min="2" max="80" value="12"><span id="brush-val">12px</span>
+    </div>
+
+    <h4>Class</h4>
+    <div id="classes"></div>
+
+    <h4>Action</h4>
+    <div class="btn-row">
+      <button id="commit">Commit / close polygon [Enter]</button>
+      <button id="clear-class">Clear current class [Shift+C]</button>
+      <button id="clear-all">Clear all [Ctrl+Shift+C]</button>
+      <button id="fit">Fit view [F]</button>
+      <button id="save">Save mask [Ctrl+S]</button>
+    </div>
+    <div class="hint">
+      Wheel: zoom / Space + drag: pan<br>
+      Keys 0–6: class / C: reset tool state
+    </div>
+  </div>
+</div>
+<script src="jszip.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
