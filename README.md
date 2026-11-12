@@ -33,8 +33,8 @@ cd code
 | Script | What it does | Paper |
 |---|---|---|
 | `rle_tools.py` | JSON <-> PNG label maps; checks counts, `mask_hash` and, with `--images`, `image_sha256` | — |
-| `analysis.py` | label statistics, agreement of zone borders with the official lines, intra-rater repeatability | Tables 1, 4, 5, 6 |
-| `baseline.py` | trains and evaluates the four baseline models | Table 3, Table S1 |
+| `analysis.py` | label statistics, agreement of zone boundaries with the official lines, intra-rater repeatability | Tables 1, 4, 5, 6 |
+| `baseline.py` | trains and evaluates the four baseline models | Tables 3, 7 |
 
 ```
 python rle_tools.py to-png zone_labels.json pngs/          # PNG label maps (pngs/<split>/<name>.png)
@@ -100,7 +100,7 @@ Polygon vertices can snap to colour edges (Sobel); this can be switched on and o
 
 ## Citation
 
-Kasai M. Liver surface zone labels for laparoscopic liver surgery images and baseline models for zone recognition. (manuscript in preparation)
+Kasai M. Liver surface zone labels for laparoscopic liver surgery images. (manuscript in preparation)
 
 Please also cite L3D-2K: Cui R, Si W, Li Z, Wang K, Pei J, Heng PA, Qin J. Depth-induced prompt learning for laparoscopic liver landmark detection. Med Image Anal 2026;109:103940. doi:10.1016/j.media.2026.103940
 
